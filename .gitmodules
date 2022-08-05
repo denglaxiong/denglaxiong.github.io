@@ -1,0 +1,3 @@
+[submodule "nginx-location-match-visible"]
+	path = nginx-location-match-visible
+	url = https://github.com/denglaxiong/nginx-location-match-visible.git
