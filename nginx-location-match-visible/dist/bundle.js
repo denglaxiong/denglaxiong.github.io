@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7e303e12206552b1700e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "06c1479b59a49f0fd122"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1033,7 +1033,7 @@
 /* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\nvar tree = __webpack_require__(76);\n\n// begin\nvar canvas = document.getElementById('tree');\nvar ctx = canvas.getContext('2d');\nvar goDom = document.getElementById('go');\nvar uriDom = document.getElementById('uri');\nvar confDom = document.getElementById('conf');\ngoDom.onclick = function () {\n    var uri = uriDom.value;\n    var conf = confDom.value;\n    if (!uri.length) {\n        console.log('please input uri you want to match like \"/abcd\"');\n        return;\n    }\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    var node = tree.render(ctx, uri, conf);\n    if (node == null) {\n        return console.log('do not match the uri ' + uri);\n    }\n\n    console.log('your uri ' + uri + ' => ' + tree.unserialize(node));\n};\n\nvar node = tree.render(ctx, '/abc', confDom.value);\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/index.js\n// module id = 75\n// module chunks = 0\n//# sourceURL=webpack:///./src/index.js?");
+	eval("/* WEBPACK VAR INJECTION */(function(process) {'use strict';\n\nvar tree = __webpack_require__(76);\n\n// begin\nvar canvas = document.getElementById('tree');\nvar ctx = canvas.getContext('2d');\nvar goDom = document.getElementById('go');\nvar uriDom = document.getElementById('uri');\nvar confDom = document.getElementById('conf');\ngoDom.onclick = function () {\n    process();\n};\nuriDom.onkeydown = function (e) {\n    // 判断是否按下enter键   enter键的ASCII码值是13\n    console.log('enter press');\n    if (e.keyCode == 13) {\n        // 给文本框聚焦\n        process();\n        uriDom.focus();\n    }\n};\nfunction process() {\n    var uri = uriDom.value;\n    var conf = confDom.value;\n    if (!uri.length) {\n        console.log('please input uri you want to match like \"/abcd\"');\n        return;\n    }\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    var node = tree.render(ctx, uri, conf);\n    if (node == null) {\n        return console.log('do not match the uri ' + uri);\n    }\n\n    console.log('your uri ' + uri + ' => ' + tree.unserialize(node));\n}\n\nvar node = tree.render(ctx, '/abc', confDom.value);\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/index.js\n// module id = 75\n// module chunks = 0\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 /* 76 */
